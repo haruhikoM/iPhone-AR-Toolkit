@@ -292,6 +292,8 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    //CLLocation *temporaryLocation = [[CLLocation alloc] initWithLatitude:36.0997 longitude:-80.2444];
+    //[self setCenterLocation:temporaryLocation];
     [self setCenterLocation:newLocation];
     [[self delegate] didUpdateLocation:newLocation];
     
