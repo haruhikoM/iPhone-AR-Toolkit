@@ -304,12 +304,12 @@
 	double adjustment = 0;
 
     switch (cameraOrientation) {
-        case UIDeviceOrientationLandscapeLeft:
-            adjustment = degreesToRadian(270); 
-            break;
-        case UIDeviceOrientationLandscapeRight:    
-            adjustment = degreesToRadian(90);
-            break;
+        //case UIDeviceOrientationLandscapeLeft:
+        //    adjustment = degreesToRadian(270); 
+        //    break;
+        //case UIDeviceOrientationLandscapeRight:    
+        //    adjustment = degreesToRadian(90);
+        //    break;
         case UIDeviceOrientationPortraitUpsideDown:
             adjustment = degreesToRadian(180);
             break;
@@ -345,12 +345,12 @@
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
 	
 	switch (cameraOrientation) {
-		case UIDeviceOrientationLandscapeLeft:
-			viewAngle = atan2(acceleration.x, acceleration.z);
-			break;
-		case UIDeviceOrientationLandscapeRight:
-			viewAngle = atan2(-acceleration.x, acceleration.z);
-			break;
+		//case UIDeviceOrientationLandscapeLeft:
+		//	viewAngle = atan2(acceleration.x, acceleration.z);
+		//	break;
+		//case UIDeviceOrientationLandscapeRight:
+		//	viewAngle = atan2(-acceleration.x, acceleration.z);
+		//	break;
 		case UIDeviceOrientationPortrait:
 			viewAngle = atan2(acceleration.y, acceleration.z);
 			break;
@@ -544,12 +544,12 @@
 
 	if (orientation != UIDeviceOrientationUnknown && orientation != UIDeviceOrientationFaceUp && orientation != UIDeviceOrientationFaceDown) {
 		switch (orientation) {
-            case UIDeviceOrientationLandscapeLeft:
-                cameraOrientation = AVCaptureVideoOrientationLandscapeRight;
-                break;
-            case UIDeviceOrientationLandscapeRight:
-                cameraOrientation = AVCaptureVideoOrientationLandscapeLeft;
-                break;
+            //case UIDeviceOrientationLandscapeLeft:
+            //    cameraOrientation = AVCaptureVideoOrientationLandscapeRight;
+            //    break;
+            //case UIDeviceOrientationLandscapeRight:
+            //    cameraOrientation = AVCaptureVideoOrientationLandscapeLeft;
+            //    break;
             case UIDeviceOrientationPortraitUpsideDown:
                 cameraOrientation = AVCaptureVideoOrientationPortraitUpsideDown;
                 break;
@@ -575,11 +575,11 @@
     CGRect newFrame = [[UIScreen mainScreen] bounds];
     
     switch (orientation) {
-        case UIDeviceOrientationLandscapeLeft:
-        case UIDeviceOrientationLandscapeRight:
-            newFrame.size.width     = [[UIScreen mainScreen] applicationFrame].size.height;
-            newFrame.size.height    = [[UIScreen mainScreen] applicationFrame].size.width;
-            break;
+        //case UIDeviceOrientationLandscapeLeft:
+        //case UIDeviceOrientationLandscapeRight:
+        //    newFrame.size.width     = [[UIScreen mainScreen] applicationFrame].size.height;
+        //    newFrame.size.height    = [[UIScreen mainScreen] applicationFrame].size.width;
+        //    break;
         case UIDeviceOrientationPortraitUpsideDown:
             break;
         default:
