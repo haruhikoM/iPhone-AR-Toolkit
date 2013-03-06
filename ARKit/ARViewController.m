@@ -51,7 +51,7 @@
 	
 	if([[locations returnLocations] count] > 0){
 		for (ARGeoCoordinate *coordinate in [locations returnLocations]){
-			MarkerView *cv = [[MarkerView alloc] initForCoordinate:coordinate withDelgate:self allowsCallout:YES];
+			MarkerView *cv = [[MarkerView alloc] initForCoordinate:coordinate withDelgate:self allowsCallout:NO];
             [coordinate setDisplayView:cv];
 			[_agController addCoordinate:coordinate];
 		}
